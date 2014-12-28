@@ -1,6 +1,6 @@
 {
   "name": "hubot-google-spreadsheet-items",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Hubot script to fetch google spread sheet items",
   "main": "index.js",
   "scripts": {
