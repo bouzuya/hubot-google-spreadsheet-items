@@ -2,10 +2,12 @@
 #   A Hubot script that DESCRIPTION
 #
 # Configuration:
-#   None
+#   HUBOT_GOOGLE_SPREADSHEET_ITEMS_EMAIL
+#   HUBOT_GOOGLE_SPREADSHEET_ITEMS_KEY
+#   HUBOT_GOOGLE_SPREADSHEET_ITEMS_SPREADSHEET_KEY
 #
 # Commands:
-#   hubot XXX [<args>] - DESCRIPTION
+#   hubot google spreadsheet items - fetch google spreadsheet items
 #
 # Note:
 #   $ KEY=$(openssl pkcs12 -in key.p12 -nodes -nocerts)
@@ -21,9 +23,9 @@ google = require 'googleapis'
 {parseString} = require 'xml2js'
 
 config = parseConfig 'google-spreadsheet-items',
-  spreadsheetKey: '0AiNaqqSQT22JdHQ1aE1xcmNqdXMteVpiUDg1MzVBeEE'
   email: null
   key: null
+  spreadsheetKey: null
 
 module.exports = (robot) ->
   # validate config
